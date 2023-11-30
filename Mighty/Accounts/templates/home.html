@@ -1,0 +1,303 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Mighty Chondria </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="online teaching platform" name="keywords">
+    <meta name="description" content="online teaching platform that 
+    helps students in the medical fields  learn complex and difficult 
+    topics in an engaging, fun, and easy way in the Arabic language ."/> 
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css'%}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <!-- <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small> -->
+                    <!-- <small class="px-3">|</small> -->
+                    <!-- <small><i class="fa fa-envelope mr-2"></i>info@example.com</small> -->
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/people/Mighty-Chondria/100092309749965/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    </a>
+                    <a class="text-white px-2" href="https://www.linkedin.com/company/mighty-chondria/?viewAsMember=true">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/mightychondria.edtech/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 ">
+        <nav  class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5" >
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0  text-primary"><img class="logo" src="{% static 'SVG/Asset 2ch.ch.svg'%}" alt="">Mighty-Chondria</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                  <a href="/en/" class="nav-item nav-link active">Home</a>
+                  <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="/en/courses/" class="nav-item nav-link">Courses</a>
+                   
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                {% if user.is_authenticated %}
+                <a href="#" class="btn btn-primary py-2 px-4 d-none d-lg-block">{{user.username}}</a>
+                <a href="/{{language_code}}/logout/" class="btn btn-primary py-2 px-4 d-none d-lg-block">Logout</a>
+
+                {%endif%}            
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid position-relative overlay-top" style="height: auto;"  >
+        <div class="container text-center my-5 ">
+            <h1  class="text-white mt-4 mb-4">Unlock Your Mighty Potential with Mighty-Chondria!</h1>
+         <br>
+            <p class=" display-1 mb-5">Are you ready to have some fun while learning?<br>
+                 Mighty-Chondria is the perfect place to do just that! </p>
+        <img style="margin-left: 10%; margin-top: 10%; max-width: 60%; height: auto;" src="{% static 'SVG/stress.svg'%}" alt="stress from studying">  
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+  <!-- About Start -->
+<div style="background-color:#609966; height: auto;">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-10 mb-5 mb-lg-0 d-flex align-items-center">
+                <img class="img-fluid" src="{% static 'SVG/Asset 1happy.svg'%}" style="width: 50%; height: 50%;" alt="Happy illustration">
+            
+                    <p class="display-5">Mighty-Chondria is an online teaching platform that helps students learn complex and
+                        difficult topics in an engaging, fun, and easy way.</p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- About End -->
+    <!-- Feature Start -->
+    <div class="container-fluid  " style="height: auto; background-color: #EDF1D6; border-bottom: 5px solid #9DC08B">
+        <div class="container" >
+            <div class="row" >
+                <h1 class="text-white " style="margin-top: 3rem" >Why should you start learning with us at Mighty-Chondria?</h1>
+                <div class="col-lg-7  pb-lg-5 ">
+                    
+                    <BR>
+                    <div class="d-flex mb-3">
+                        <div class="btn-icon bg-primary mr-4">
+                            <i class="fa fa-2x fa-certificate text-white"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4 class="text-5">Engaging and Interactive Approach</h4>
+                            <p class="text-6">Through the use of illustrations, animations, and interactive exercises, 
+                            we bring the subjects to life, making your learning experience enjoyable and effective.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="btn-icon bg mr-4" >
+                            <i class="fa fa-2x  " style="color: #609966; width: 18px;"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4 class="text-5">Comprehensive and Trusted Resources</h4>
+                            <p class="text-6">Our video lessons are meticulously crafted to deliver comprehensive content, 
+                                and we provide additional study materials, trusted references, and assessments
+                                 to supplement your learning.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="btn-icon bg-mint mr-4">
+                            <i class="fa fa-2x" style="color: #9DC08B; width: 18px;"></i>
+                        </div>
+                        <div class="mt-n1">
+                            <h4 class="text-5">Supportive Learning Community</h4>
+                            <p class=" text-6">Our platform fosters a collaborative environment where you can share insights, 
+                                ask questions, and receive valuable feedback, creating a sense of camaraderie and support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" style="height: 500px;">
+                    <div>
+                        <img class="position-absolute w-100 h-100" src="{% static 'SVG/Asset 6sad.svg'%}" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-fluid px-0 py-5 " style="background-color: #EDF1D6;height: 600px; border-bottom: 5px solid #9DC08B" >
+        <div class="row mx-0 justify-content-center pt-5">
+            <h1 class="display-6">Explore our topics</h1> 
+        </div>
+        <div class="owl-carousel courses-carousel">
+            <div class="courses-item">
+                <img class="img-fluid" src="{% static 'SVG/Asset 38rbcs.svg '%}" alt="">
+                <div>
+                    <div class="w-100  text-center p-4" >
+                        <a class="btn btn-primary"style="font-family: montserrat medium;" href="detail - hematology.html">Hematology</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item ">
+                <img class="img-fluid" src="{% static 'SVG/Asset 39wbcs front.svg ' %}" alt="">
+                <div>
+                    <div class="w-100  text-center p-4" >
+                        <a class="btn btn-primary"style="font-family: montserrat medium;" href="detail - Immunology.html">Immunology</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item ">
+                <img class="img-fluid" src="{% static 'SVG/heart.svg'%}" alt="">
+                <div>
+                    <div class="w-100  text-center p-4" >
+                        <a class="btn btn-primary" style="font-family: montserrat medium;" href="">Cardiovascular</a>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-item ">
+                <img class="img-fluid" src="{% static 'SVG/kidney.svg' %}" alt="">
+                <div>
+                    <div class="w-100  text-center p-4" >
+                        <a class="btn btn-primary"style="font-family: montserrat medium;" href=""> Renal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <!-- Courses End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid " style="background-color: #EDF1D6; width: 100%;" >
+        <div class="container py-5" >
+            <div class="row justify-content-center" >
+                    <div>
+                        <h1 class="text-white mt-4 ">Learning should be fun.<br>
+                            It's our job to make it so!</h1>
+                    </div>
+                     <img style=" margin-top: 10%; max-width: 50%; height: auto;" src="{% static 'SVG/fun.svg '%}" alt="">
+            </div>                      
+        </div>
+    </div>
+    <!-- Testimonial Start -->
+    <!-- Footer Start -->
+    <div class="container-fluid position-relative  bg-dark text-white-50"  >
+        <div class="container">
+            <div class="row">
+                <div class="" >
+                    <a href="index.html" class="navbar-brand" >
+                        <h1 class="m-0  text-primary" style="margin-left: 0px; margin-right: 0%;">
+                            <img class="logo" src="{% static 'SVG/Asset 2ch.ch.svg '%}" alt="">Mighty-Chondria</h1>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-5" >
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light" style="margin-top: 50px" placeholder="Your Email Address">
+                            <div class="input-group-append">
+                                <button  style="margin-top: 50px"class="btn btn-primary px-4">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start row">
+                <div class="col-md-4" style="margin-top: 0px;">
+                    <h3 class="text-ter mb-4" style=" font-family: montserrat; color: #EDF1D6;
+                    font-size: 20px; font-weight: 600;">Our topics</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-2 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Hematology</a>
+                        <a class="text-white-2 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Immunology</a>
+                        <a class="text-white-2 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Cardiovascular</a>
+                        <a class="text-white-2 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Renal</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5" >
+                    <h3 class="text-ter mb-4" style=" font-family: montserrat; color: #EDF1D6;
+                    font-size: 20px; font-weight: 600; ">Get In Touch</h3>
+                    <!-- <p><i class="fa fa-envelope mr-2"></i>info@example.com</p> -->
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="text-white-2 mr-4" href="https://www.facebook.com/people/Mighty-Chondria/100092309749965/"><i class="fab fa-2x fa-facebook-f"></i></a>
+                        <a class="text-white-2 mr-4" href="https://www.linkedin.com/company/mighty-chondria/?viewAsMember=true"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                        <a class="text-white-2 " href="https://www.instagram.com/mightychondria.edtech/"><i class="fab fa-2x fa-instagram"></i></a>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 mb-5" >
+                    <h3 class="text-ter mb-4" style=" font-family: montserrat; color: #EDF1D6;
+                    font-size: 20px; font-weight: 600;">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-2 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        <a class="text-white-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js'%}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js'%}"></script>
+    
+</body>
+
+</html>
+    <!-- Include your theme.js -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    </body>
+</html>
